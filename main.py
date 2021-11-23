@@ -1,56 +1,62 @@
+# Import some modules for JSON operations and utilities
+
 import json
-from PIL import Image
-from PIL.ImageOps import colorize
+from util import check_validity, create_image
 
+# Define the colors of the nodes
+colors = {
+    "red": (255, 0, 0),
+    "green": (0, 255, 0),
+    "yellow": (255, 255, 0),
+    "blue": (0, 64, 255)
+}
 
-colorings = {"red": (255, 0, 0), "green": (0, 255, 0), "yellow": (255, 255, 0), "blue": (0, 64, 255)}
-
-with open("adjacency.json", "r") as json_file:
-    data = json.load(json_file)
-
+# Open the condensed adjacency file and load it into a variable
 with open("condensed.json", "r") as json_file:
     condensed = json.load(json_file)
 
-nodes = data["nodes"]
-adjacencies = data["adjacency"]
-colors = {node: "" for node in nodes}
+# The node names and colors (initialized to none)
+nodes = {node: None for node in condensed.keys()}
+node_names = list(nodes.keys())
 
-def check_validity(colors, condensed):
-    for row_node, row in condensed.items():
-        for col_node in row:
-            if colors[row_node] == colors[col_node] and colors[row_node] != '' and colors[col_node] != '':
-                return False
-    return True
+# Color states recursively with backtracking
+# Input: the node index (optional)
+# Output: success of coloring
 
-print(check_validity(colors, condensed))
+def color_states(node_index=0):
 
-def color_states(node_index):
-    if node_index == len(nodes):
-        return True
-    for c in colorings.keys():
-        print(f"trying to color {nodes[node_index]} {c}")
-        colors[nodes[node_index]] = c
-        if check_validity(colors, condensed):
-            if color_states(node_index+1):
+    # Initialize some variables to reduce code reuse
+    node_name = node_names[node_index]
+    last_node = node_index == len(nodes) - 1
+
+    # Try every defined color
+    for c in colors.keys():
+
+        # Try to color the current node the current color
+        nodes[node_name] = c
+
+        # If we are still in a valid state after that
+        if check_validity(nodes, condensed):
+
+            # Return True if we are on the last node or if we could successfully color the subsequent nodes
+            if last_node or color_states(node_index+1):
                 return True
+        
+        # Otherwise undo the coloring
         else:
-            colors[nodes[node_index]] = ""
+            nodes[node_name] = None
+    
+    # If we have tried every color and still not returned True, it is impossible to be valid given the previous state
     else:
         return False
 
-color_states(0)
-print(json.dumps(colors, indent=4))
+# Color the states and print out the final configuration
+if color_states():
+    print(json.dumps(nodes, indent=4))
+else:
+    print("Could not find a valid state")
 
-size = (1056, 1159)
-img = Image.new("RGBA", size, (255, 255, 255))
-
-
-for county, color in colors.items():
-    try:
-        overlay = Image.open(f"images/{county}.png").convert("L")
-        overlay_colored = colorize(overlay, (0,0,0), colorings[color])
-        img.paste(overlay_colored, (0, 0), overlay)
-    except:
-        print(f"image \"{county}.png\" not found!")
-
+# Create the image of the state, save it, and show it
+img = create_image(nodes, colors)
+img.save("output.png")
 img.show()
