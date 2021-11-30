@@ -54,3 +54,12 @@ def create_image(state, colors):
     
     # Return the completed node
     return img
+
+# Song:
+# was thinking to implement bidirectional search
+# this function checks if the goal state is reached
+def check_uncolored(nodes):
+    for node in nodes:
+        if nodes[node] == None:
+            return False
+    return True
