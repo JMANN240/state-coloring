@@ -1,0 +1,732 @@
+{
+    "michigan": [
+        "indiana",
+        "lake erie",
+        "williams",
+        "fulton",
+        "lucas"
+    ],
+    "indiana": [
+        "michigan",
+        "kentucky",
+        "williams",
+        "defiance",
+        "paulding",
+        "van wert",
+        "mercer",
+        "darke",
+        "preble",
+        "butler",
+        "hamilton"
+    ],
+    "kentucky": [
+        "indiana",
+        "west virginia",
+        "hamilton",
+        "clermont",
+        "brown",
+        "adams",
+        "scioto",
+        "lawrence"
+    ],
+    "west virginia": [
+        "kentucky",
+        "pennsylvania",
+        "lawrence",
+        "athens",
+        "meigs",
+        "gallia",
+        "washington",
+        "belmont",
+        "monroe",
+        "columbiana",
+        "jefferson"
+    ],
+    "pennsylvania": [
+        "west virginia",
+        "lake erie",
+        "ashtabula",
+        "trumbull",
+        "mahoning",
+        "columbiana"
+    ],
+    "lake erie": [
+        "michigan",
+        "pennsylvania",
+        "lucas",
+        "ottawa",
+        "sandusky",
+        "erie",
+        "lorain",
+        "cuyahoga",
+        "lake",
+        "ashtabula"
+    ],
+    "williams": [
+        "michigan",
+        "indiana",
+        "defiance",
+        "fulton",
+        "henry"
+    ],
+    "defiance": [
+        "indiana",
+        "williams",
+        "paulding",
+        "henry",
+        "putnam"
+    ],
+    "paulding": [
+        "indiana",
+        "defiance",
+        "van wert",
+        "putnam"
+    ],
+    "van wert": [
+        "indiana",
+        "paulding",
+        "mercer",
+        "putnam",
+        "allen",
+        "auglaize"
+    ],
+    "mercer": [
+        "indiana",
+        "van wert",
+        "darke",
+        "auglaize",
+        "shelby"
+    ],
+    "darke": [
+        "indiana",
+        "mercer",
+        "preble",
+        "shelby",
+        "miami",
+        "montgomery"
+    ],
+    "preble": [
+        "indiana",
+        "darke",
+        "butler",
+        "montgomery"
+    ],
+    "butler": [
+        "indiana",
+        "preble",
+        "hamilton",
+        "montgomery",
+        "warren"
+    ],
+    "hamilton": [
+        "indiana",
+        "kentucky",
+        "butler",
+        "warren",
+        "clermont"
+    ],
+    "fulton": [
+        "michigan",
+        "williams",
+        "henry",
+        "lucas"
+    ],
+    "henry": [
+        "williams",
+        "defiance",
+        "fulton",
+        "putnam",
+        "lucas",
+        "wood"
+    ],
+    "putnam": [
+        "defiance",
+        "paulding",
+        "van wert",
+        "henry",
+        "allen",
+        "hancock"
+    ],
+    "allen": [
+        "van wert",
+        "putnam",
+        "auglaize",
+        "hancock",
+        "hardin"
+    ],
+    "auglaize": [
+        "van wert",
+        "mercer",
+        "allen",
+        "shelby",
+        "hardin",
+        "logan"
+    ],
+    "shelby": [
+        "mercer",
+        "darke",
+        "auglaize",
+        "miami",
+        "logan",
+        "champaign"
+    ],
+    "miami": [
+        "darke",
+        "shelby",
+        "montgomery",
+        "champaign",
+        "clark"
+    ],
+    "montgomery": [
+        "darke",
+        "preble",
+        "butler",
+        "miami",
+        "warren",
+        "clark",
+        "greene"
+    ],
+    "warren": [
+        "butler",
+        "hamilton",
+        "montgomery",
+        "clermont",
+        "greene",
+        "clinton"
+    ],
+    "clermont": [
+        "kentucky",
+        "hamilton",
+        "warren",
+        "clinton",
+        "brown"
+    ],
+    "lucas": [
+        "michigan",
+        "lake erie",
+        "fulton",
+        "henry",
+        "wood",
+        "ottawa"
+    ],
+    "wood": [
+        "henry",
+        "lucas",
+        "hancock",
+        "ottawa",
+        "sandusky",
+        "seneca"
+    ],
+    "hancock": [
+        "putnam",
+        "allen",
+        "wood",
+        "hardin",
+        "seneca",
+        "wyandot"
+    ],
+    "hardin": [
+        "allen",
+        "auglaize",
+        "hancock",
+        "logan",
+        "wyandot",
+        "marion",
+        "union"
+    ],
+    "logan": [
+        "auglaize",
+        "shelby",
+        "hardin",
+        "champaign",
+        "union"
+    ],
+    "champaign": [
+        "shelby",
+        "miami",
+        "logan",
+        "clark",
+        "union",
+        "madison"
+    ],
+    "clark": [
+        "miami",
+        "montgomery",
+        "champaign",
+        "greene",
+        "madison"
+    ],
+    "greene": [
+        "montgomery",
+        "warren",
+        "clark",
+        "clinton",
+        "madison",
+        "fayette"
+    ],
+    "clinton": [
+        "warren",
+        "clermont",
+        "greene",
+        "brown",
+        "fayette",
+        "highland"
+    ],
+    "brown": [
+        "kentucky",
+        "clermont",
+        "clinton",
+        "highland",
+        "adams"
+    ],
+    "ottawa": [
+        "lake erie",
+        "lucas",
+        "wood",
+        "sandusky"
+    ],
+    "sandusky": [
+        "lake erie",
+        "wood",
+        "ottawa",
+        "seneca",
+        "erie",
+        "huron"
+    ],
+    "seneca": [
+        "wood",
+        "hancock",
+        "sandusky",
+        "wyandot",
+        "huron",
+        "crawford"
+    ],
+    "wyandot": [
+        "hancock",
+        "hardin",
+        "seneca",
+        "marion",
+        "crawford"
+    ],
+    "marion": [
+        "hardin",
+        "wyandot",
+        "union",
+        "crawford",
+        "morrow",
+        "delaware"
+    ],
+    "union": [
+        "hardin",
+        "logan",
+        "champaign",
+        "marion",
+        "madison",
+        "delaware",
+        "franklin"
+    ],
+    "madison": [
+        "champaign",
+        "clark",
+        "greene",
+        "union",
+        "fayette",
+        "franklin",
+        "pickaway"
+    ],
+    "fayette": [
+        "greene",
+        "clinton",
+        "madison",
+        "highland",
+        "pickaway",
+        "ross"
+    ],
+    "highland": [
+        "clinton",
+        "brown",
+        "fayette",
+        "adams",
+        "ross",
+        "pike"
+    ],
+    "adams": [
+        "kentucky",
+        "brown",
+        "highland",
+        "pike",
+        "scioto"
+    ],
+    "erie": [
+        "lake erie",
+        "sandusky",
+        "huron",
+        "lorain"
+    ],
+    "huron": [
+        "sandusky",
+        "seneca",
+        "erie",
+        "crawford",
+        "richland",
+        "lorain",
+        "ashland"
+    ],
+    "crawford": [
+        "seneca",
+        "wyandot",
+        "marion",
+        "huron",
+        "richland",
+        "morrow"
+    ],
+    "richland": [
+        "huron",
+        "crawford",
+        "morrow",
+        "ashland",
+        "knox"
+    ],
+    "morrow": [
+        "marion",
+        "crawford",
+        "richland",
+        "delaware",
+        "knox"
+    ],
+    "delaware": [
+        "marion",
+        "union",
+        "morrow",
+        "franklin",
+        "knox",
+        "licking"
+    ],
+    "franklin": [
+        "union",
+        "madison",
+        "delaware",
+        "pickaway",
+        "licking",
+        "fairfield"
+    ],
+    "pickaway": [
+        "madison",
+        "fayette",
+        "franklin",
+        "ross",
+        "fairfield",
+        "hocking"
+    ],
+    "ross": [
+        "fayette",
+        "highland",
+        "pickaway",
+        "pike",
+        "hocking",
+        "vinton",
+        "jackson"
+    ],
+    "pike": [
+        "highland",
+        "adams",
+        "ross",
+        "scioto",
+        "jackson"
+    ],
+    "scioto": [
+        "kentucky",
+        "adams",
+        "pike",
+        "jackson",
+        "lawrence"
+    ],
+    "lorain": [
+        "lake erie",
+        "erie",
+        "huron",
+        "ashland",
+        "cuyahoga",
+        "medina"
+    ],
+    "ashland": [
+        "huron",
+        "richland",
+        "lorain",
+        "knox",
+        "medina",
+        "wayne",
+        "holmes"
+    ],
+    "knox": [
+        "richland",
+        "morrow",
+        "delaware",
+        "ashland",
+        "licking",
+        "holmes",
+        "coshocton"
+    ],
+    "licking": [
+        "delaware",
+        "franklin",
+        "knox",
+        "fairfield",
+        "coshocton",
+        "muskingum",
+        "perry"
+    ],
+    "fairfield": [
+        "franklin",
+        "pickaway",
+        "licking",
+        "hocking",
+        "perry"
+    ],
+    "hocking": [
+        "pickaway",
+        "ross",
+        "fairfield",
+        "vinton",
+        "perry",
+        "athens"
+    ],
+    "vinton": [
+        "ross",
+        "hocking",
+        "jackson",
+        "athens",
+        "meigs",
+        "gallia"
+    ],
+    "jackson": [
+        "ross",
+        "pike",
+        "scioto",
+        "vinton",
+        "lawrence",
+        "gallia"
+    ],
+    "lawrence": [
+        "kentucky",
+        "west virginia",
+        "scioto",
+        "jackson",
+        "gallia"
+    ],
+    "cuyahoga": [
+        "lake erie",
+        "lorain",
+        "medina",
+        "summit",
+        "lake",
+        "geauga"
+    ],
+    "medina": [
+        "lorain",
+        "ashland",
+        "cuyahoga",
+        "wayne",
+        "summit"
+    ],
+    "wayne": [
+        "ashland",
+        "medina",
+        "holmes",
+        "summit",
+        "stark"
+    ],
+    "holmes": [
+        "ashland",
+        "knox",
+        "wayne",
+        "coshocton",
+        "stark",
+        "tuscarawas"
+    ],
+    "coshocton": [
+        "knox",
+        "licking",
+        "holmes",
+        "muskingum",
+        "tuscarawas",
+        "guernsey"
+    ],
+    "muskingum": [
+        "licking",
+        "coshocton",
+        "perry",
+        "morgan",
+        "guernsey",
+        "noble"
+    ],
+    "perry": [
+        "licking",
+        "fairfield",
+        "hocking",
+        "muskingum",
+        "morgan",
+        "athens"
+    ],
+    "morgan": [
+        "muskingum",
+        "perry",
+        "athens",
+        "noble",
+        "washington"
+    ],
+    "athens": [
+        "west virginia",
+        "hocking",
+        "vinton",
+        "perry",
+        "morgan",
+        "meigs",
+        "washington"
+    ],
+    "meigs": [
+        "west virginia",
+        "vinton",
+        "athens",
+        "gallia"
+    ],
+    "gallia": [
+        "west virginia",
+        "vinton",
+        "jackson",
+        "lawrence",
+        "meigs"
+    ],
+    "summit": [
+        "cuyahoga",
+        "medina",
+        "wayne",
+        "stark",
+        "portage"
+    ],
+    "stark": [
+        "wayne",
+        "holmes",
+        "summit",
+        "tuscarawas",
+        "portage",
+        "carroll",
+        "mahoning",
+        "columbiana"
+    ],
+    "tuscarawas": [
+        "holmes",
+        "coshocton",
+        "stark",
+        "guernsey",
+        "carroll",
+        "harrison"
+    ],
+    "guernsey": [
+        "coshocton",
+        "muskingum",
+        "tuscarawas",
+        "noble",
+        "harrison",
+        "belmont"
+    ],
+    "noble": [
+        "muskingum",
+        "morgan",
+        "guernsey",
+        "washington",
+        "belmont",
+        "monroe"
+    ],
+    "washington": [
+        "west virginia",
+        "morgan",
+        "athens",
+        "noble",
+        "monroe"
+    ],
+    "lake": [
+        "lake erie",
+        "cuyahoga",
+        "geauga",
+        "ashtabula"
+    ],
+    "geauga": [
+        "cuyahoga",
+        "lake",
+        "portage",
+        "ashtabula",
+        "trumbull"
+    ],
+    "portage": [
+        "summit",
+        "stark",
+        "geauga",
+        "trumbull",
+        "mahoning"
+    ],
+    "carroll": [
+        "stark",
+        "tuscarawas",
+        "harrison",
+        "columbiana",
+        "jefferson"
+    ],
+    "harrison": [
+        "tuscarawas",
+        "guernsey",
+        "carroll",
+        "belmont",
+        "jefferson"
+    ],
+    "belmont": [
+        "west virginia",
+        "guernsey",
+        "noble",
+        "harrison",
+        "monroe",
+        "jefferson"
+    ],
+    "monroe": [
+        "west virginia",
+        "noble",
+        "washington",
+        "belmont"
+    ],
+    "ashtabula": [
+        "pennsylvania",
+        "lake erie",
+        "lake",
+        "geauga",
+        "trumbull"
+    ],
+    "trumbull": [
+        "pennsylvania",
+        "geauga",
+        "portage",
+        "ashtabula",
+        "mahoning"
+    ],
+    "mahoning": [
+        "pennsylvania",
+        "stark",
+        "portage",
+        "trumbull",
+        "columbiana"
+    ],
+    "columbiana": [
+        "west virginia",
+        "pennsylvania",
+        "stark",
+        "carroll",
+        "mahoning",
+        "jefferson"
+    ],
+    "jefferson": [
+        "west virginia",
+        "carroll",
+        "harrison",
+        "belmont",
+        "columbiana"
+    ]
+}
