@@ -2,7 +2,7 @@
 
 import json
 from collections import OrderedDict
-from util import check_validity, create_image, check_validity_quick
+from util import create_image, check_validity_quick
 
 # Define the colors of the nodes
 colors = {

@@ -1,7 +1,7 @@
 # Import some modules for JSON operations and utilities
 
 import json
-from util import check_validity, create_image, check_validity_quick
+from util import create_image, check_validity_quick
 
 # Define the colors of the nodes
 colors = {
@@ -55,10 +55,10 @@ def color_states(node_index=0):
 # Color the states and print out the final configuration
 if color_states():
     print(json.dumps(nodes, indent=4))
+
+    # Create the image of the state, save it, and show it
+    img = create_image(nodes, colors)
+    img.save("output.png")
+    img.show()
 else:
     print("Could not find a valid state")
-
-# Create the image of the state, save it, and show it
-img = create_image(nodes, colors)
-img.save("output.png")
-img.show()
