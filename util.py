@@ -25,6 +25,12 @@ def check_validity(state, adjacency):
     # If we make it through the loop, return True
     return True
 
+def check_validity_quick(state, adjacency, node):
+    for adj in adjacency[node]:
+        if state[node] == state[adj]:
+            return False
+    return True
+
 # Create the image of the coloring given a state
 # Input: state of nodes, color definitions
 # Output: a PIL image of the colored nodes
@@ -43,7 +49,7 @@ def create_image(state, colors):
             overlay = Image.open(f"images/{node}.png").convert("L")
 
             # Colorize the node's image to the node's color
-            overlay_colored = colorize(overlay, (0,0,0), colors[color])
+            overlay_colored = colorize(overlay, (0,0,0), colors.get(color, (255, 255, 255)))
 
             # overlay the node's image onto the existing image
             img.paste(overlay_colored, (0, 0), overlay)
