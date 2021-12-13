@@ -19,7 +19,7 @@ def check_validity(state, adjacency):
         for col_node in row:
 
             # If the row node and the column node have the same color and aren't None, return False
-            if state[row_node] == state[col_node] and state[row_node] is not None and state[col_node] is not None:
+            if state[row_node]["color"] == state[col_node]["color"] and state[row_node]["color"] is not None and state[col_node]["color"] is not None:
                 return False
     
     # If we make it through the loop, return True
@@ -27,7 +27,7 @@ def check_validity(state, adjacency):
 
 def check_validity_quick(state, adjacency, node):
     for adj in adjacency[node]:
-        if state[node] == state[adj]:
+        if state[node]["color"] == state[adj]["color"]:
             return False
     return True
 
@@ -41,7 +41,7 @@ def create_image(state, colors):
     img = Image.new("RGBA", (1056, 1159), (255, 255, 255))
 
     # For every node and its color in items
-    for node, color in state.items():
+    for node, info in state.items():
 
         # Try to add the node's overlay
         try:
@@ -49,7 +49,7 @@ def create_image(state, colors):
             overlay = Image.open(f"images/{node}.png").convert("L")
 
             # Colorize the node's image to the node's color
-            overlay_colored = colorize(overlay, (0,0,0), colors.get(color, (255, 255, 255)))
+            overlay_colored = colorize(overlay, (0,0,0), colors.get(info["color"], (255, 255, 255)))
 
             # overlay the node's image onto the existing image
             img.paste(overlay_colored, (0, 0), overlay)

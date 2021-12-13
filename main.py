@@ -11,45 +11,60 @@ colors = {
     "blue": (0, 64, 255)
 }
 
-# Open the condensed adjacency file and load it into a variable
-with open("condensed.json", "r") as json_file:
-    condensed = json.load(json_file)
-
 # Open the verbose adjacency file and load it into a variable
 with open("verbose.json", "r") as json_file:
     verbose = json.load(json_file)
 
 # The node names and colors (initialized to none)
-nodes = {node: None for node in condensed.keys()}
-node_names = list(nodes.keys())
+node_names = list(verbose.keys())
+nodes = {node: {"color": None} for node in node_names}
+
+def get_next_node():
+    for node, info in nodes.items():
+        if info["color"] is None:
+            return node
+    return None
+
+def color_node(node_name, color):
+    nodes[node_name]["color"] = color
+
+def uncolor_node(node_name):
+    nodes[node_name]["color"] = None
 
 # Color states recursively with backtracking
 # Input: the node index (optional)
 # Output: success of coloring
 
-def color_states(node_index=0):
+def complete():
+    for info in nodes.values():
+        if info["color"] is None:
+            return False
+    return True
+
+def color_states():
 
     # Initialize some variables to reduce code reuse
-    node_name = node_names[node_index]
-    last_node = node_index == len(nodes) - 1
+    node_name = get_next_node()
+    if complete():
+        return True
 
     # Try every defined color
     for c in colors.keys():
 
         # Try to color the current node the current color
-        nodes[node_name] = c
+        color_node(node_name, c)
 
         # If we are still in a valid state after that
         if check_validity_quick(nodes, verbose, node_name):
 
             # Return True if we are on the last node or if we could successfully color the subsequent nodes
-            if last_node or color_states(node_index+1):
+            if color_states():
                 return True
+        uncolor_node(node_name)
     
     # If we have tried every color and still not returned True, it is impossible to be valid given the previous state
     else:
         # Undo current node's color and return false
-        nodes[node_name] = None
         return False
 
 # Color the states and print out the final configuration
