@@ -69,3 +69,9 @@ def check_uncolored(nodes):
         if nodes[node] == None:
             return False
     return True
+
+def complete(nodes):
+    for info in nodes.values():
+        if info["color"] is None:
+            return False
+    return True
