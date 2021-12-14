@@ -13,7 +13,7 @@ colors = {
 }
 
 # Open the verbose adjacency file and load it into a variable
-with open("verbose.json", "r") as json_file:
+with open("verbose_small.json", "r") as json_file:
     verbose = json.load(json_file)
 
 # The node names and colors (initialized to none)
@@ -85,6 +85,8 @@ def color_states():
         # Undo current node's color and return false
         return False
 
+start_time = time()
+
 # Color the states and print out the final configuration
 if color_states():
     print(json.dumps(nodes, indent=4))
@@ -95,3 +97,7 @@ if color_states():
     img.show()
 else:
     print("Could not find a valid state")
+
+end_time = time()
+
+print(f"Took {end_time-start_time} seconds to run")

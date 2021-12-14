@@ -64,6 +64,8 @@ def color_states():
         # Undo current node's color and return false
         return False
 
+start_time = time()
+
 # Color the states and print out the final configuration
 if color_states():
     print(json.dumps(nodes, indent=4))
@@ -74,3 +76,7 @@ if color_states():
     img.show()
 else:
     print("Could not find a valid state")
+
+end_time = time()
+
+print(f"Took {end_time-start_time} seconds to run")
