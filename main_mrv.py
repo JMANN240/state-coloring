@@ -53,7 +53,7 @@ def color_states():
 
     # Initialize some variables to reduce code reuse
     node_name = get_next_node_mrv()
-    if complete():
+    if complete(nodes):
         return True
 
     # Try every defined color

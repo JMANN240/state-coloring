@@ -42,7 +42,7 @@ def color_states():
 
     # Initialize some variables to reduce code reuse
     node_name = get_next_node()
-    if complete():
+    if complete(nodes):
         return True
 
     # Try every defined color

@@ -13,7 +13,7 @@ colors = {
 }
 
 # Open the verbose adjacency file and load it into a variable
-with open("verbose_small.json", "r") as json_file:
+with open("verbose.json", "r") as json_file:
     verbose = json.load(json_file)
 
 # The node names and colors (initialized to none)
@@ -63,7 +63,7 @@ def color_states():
     
     # Initialize some variables to reduce code reuse
     node_name = get_next_node_mcf()
-    if complete():
+    if complete(nodes):
         return True
 
     # Try every defined color
