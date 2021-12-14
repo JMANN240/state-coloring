@@ -1,7 +1,6 @@
 # Import some modules for JSON operations and utilities
 
 import json
-from collections import OrderedDict
 from util import create_image
 
 # Define the colors of the nodes
