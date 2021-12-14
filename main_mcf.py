@@ -1,9 +1,8 @@
 # Import some modules for JSON operations and utilities
 
 import json
-from util import create_image, check_validity_quick
-
-import time
+from util import create_image, check_validity_quick, complete
+from time import time
 
 # Define the colors of the nodes
 colors = {
@@ -43,16 +42,14 @@ def get_next_node_mcf():
 
     return ret
 
-def update_neighbors(node, delta):
-    for neighbor in verbose[node]:
-        nodes[neighbor]["unassigned_neighbors"] += delta
-
+# Function that defines how a node should be colored based on the heuristic
 def color_node(node_name, color):
     if nodes[node_name]["color"] == None:
         for neighbor in verbose[node_name]:
             nodes[neighbor]["unassigned_neighbors"] -= 1
     nodes[node_name]["color"] = color
 
+# Function that defines how a node should be uncolored based on the heuristic
 def uncolor_node(node_name):
     nodes[node_name]["color"] = None
     for neighbor in verbose[node_name]:
@@ -62,14 +59,11 @@ def uncolor_node(node_name):
 # Input: the node index (optional)
 # Output: success of coloring
 
-i = 0
-
 def color_states():
-    global i
-
+    
     # Initialize some variables to reduce code reuse
     node_name = get_next_node_mcf()
-    if node_name is None:
+    if complete():
         return True
 
     # Try every defined color
@@ -93,11 +87,11 @@ def color_states():
 
 # Color the states and print out the final configuration
 if color_states():
-    print(nodes)
+    print(json.dumps(nodes, indent=4))
 
     # Create the image of the state, save it, and show it
     img = create_image(nodes, colors)
-    img.save("output.png")
+    img.save("output_mcf.png")
     img.show()
 else:
     print("Could not find a valid state")

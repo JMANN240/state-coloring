@@ -1,7 +1,8 @@
 # Import some modules for JSON operations and utilities
 
 import json
-from util import create_image, check_validity_quick
+from util import create_image, check_validity_quick, complete
+from time import time
 
 # Define the colors of the nodes
 colors = {
@@ -25,21 +26,17 @@ def get_next_node():
             return node
     return None
 
+# Function that defines how a node should be colored based on the heuristic
 def color_node(node_name, color):
     nodes[node_name]["color"] = color
 
+# Function that defines how a node should be uncolored based on the heuristic
 def uncolor_node(node_name):
     nodes[node_name]["color"] = None
 
 # Color states recursively with backtracking
 # Input: the node index (optional)
 # Output: success of coloring
-
-def complete():
-    for info in nodes.values():
-        if info["color"] is None:
-            return False
-    return True
 
 def color_states():
 
